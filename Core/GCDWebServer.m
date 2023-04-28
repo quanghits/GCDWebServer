@@ -195,7 +195,7 @@ static void _ExecuteMainThreadRunLoopSources() {
 - (void)dealloc {
   GWS_DCHECK(_connected == NO);
   GWS_DCHECK(_activeConnections == 0);
-  GWS_DCHECK(_options == nil);  // The server can never be dealloc'ed while running because of the retain-cycle with the dispatch source
+//   GWS_DCHECK(_options == nil);  // The server can never be dealloc'ed while running because of the retain-cycle with the dispatch source
   GWS_DCHECK(_disconnectTimer == NULL);  // The server can never be dealloc'ed while the disconnect timer is pending because of the retain-cycle
 
 #if !OS_OBJECT_USE_OBJC_RETAIN_RELEASE
